@@ -12,16 +12,21 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+
 </head>
-<body>
+
+<body onload="validate()" oninput="validate()">
   <!-- Image and text -->
   <nav class="navbar navbar-dark bg-dark">
-    
+
     <p class="font">IMC-CALC</p>
     <a href="../../index.html">
-    
+
       <button type="button" class="btn btn-light float-right ">Voltar</button>
-    </a> 
+    </a>
   </nav>
   <div class="container">
     <div class="row">
@@ -36,19 +41,19 @@
     </div>
     <div class="row">
       <div class="col-12 col-sm-6 mt-4">
-        <button type="button" class="btn btn-primary btn-block" onclick="imc()">CALCULAR</button>
+        <button type="button" id="btnCalc" class="btn btn-success btn-block" onclick="imc()">CALCULAR</button>
       </div>
       <div class="col-12 col-sm-6 mt-4">
-        <button class="btn btn-primary btn-block" onclick="clean()">LIMPAR</button>
+        <button class="btn btn-primary btn-block " onclick="clean()">LIMPAR</button>
       </div>
     </div>
-      <div class="result">
+    <div class="result">
       <div id="result" class="alert alert-warning  mt-2 text-center" role="alert">
         O seu IMC é:
-        
+
       </div>
     </div>
-  
+
     <div class="d-none d-md-block ">
 
 
@@ -61,11 +66,11 @@
           </tr>
         </thead>
         <tbody>
-          
+
           <tr>
-            <td >MENOR QUE 18,5</td>
-            <td >MAGREZA</td>
-            <td >0</td>
+            <td>MENOR QUE 18,5</td>
+            <td>MAGREZA</td>
+            <td>0</td>
           </tr>
           <tr>
             <td>ENTRE 18,5 E 24,9</td>
@@ -73,7 +78,7 @@
             <td>0</td>
           </tr>
           <tr>
-  
+
             <td>ENTRE 25,0 E 29,9</td>
             <td>SOBREPESO</td>
             <td>I</td>
@@ -92,52 +97,64 @@
       </table>
     </div>
 
-    <div class="sm-content d-block d-md-none" >
-     
+    <div class="sm-content d-block d-md-none">
 
 
-        <table class="table">
-          
-          <thead class="thead-ligth">
-            <h4 class="alert font text-center mt-2 bg-dark">INFORMAÇÕES SOBRE O IMC</h4>
-            <tr>
-              <td scope="col">Menor que 18,5</th>
-              <td scope="col">Magreza</th>
-            </tr>
-            <tr>
-              <td scope="col">Entre 18,5 e 24,9</th>
-              <td scope="col">Normal</th>
-            </tr>
-            <tr>
-              <td scope="col">Entre 25,0 e 29,9</th>
-              <td scope="col">Sobrepeso</th>
-            </tr>
-            <tr>
-              <td scope="col">Entre 30,0 e 39,9</th>
-              <td scope="col">Obesidade</th>
-            </tr>
-            <tr>
-              <td scope="col">Maior que 40,0</th>
-              <td scope="col">Obesidade grave</th>
-            </tr>
-          </thead>
+
+      <table class="table">
+
+        <thead class="thead-ligth">
+          <h4 class="alert font text-center mt-2 bg-dark">INFORMAÇÕES SOBRE O IMC</h4>
+          <tr>
+            <td scope="col">Menor que 18,5</th>
+            <td scope="col">Magreza</th>
+          </tr>
+          <tr>
+            <td scope="col">Entre 18,5 e 24,9</th>
+            <td scope="col">Normal</th>
+          </tr>
+          <tr>
+            <td scope="col">Entre 25,0 e 29,9</th>
+            <td scope="col">Sobrepeso</th>
+          </tr>
+          <tr>
+            <td scope="col">Entre 30,0 e 39,9</th>
+            <td scope="col">Obesidade</th>
+          </tr>
+          <tr>
+            <td scope="col">Maior que 40,0</th>
+            <td scope="col">Obesidade grave</th>
+          </tr>
+        </thead>
     </div>
 
 
-  
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <script type="text/javascript"></script>
 
-  <script src="../script/imcCalc.js"></script>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+ 
+
+
+
+    <script src="../script/imcCalc.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>
