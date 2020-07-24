@@ -24,6 +24,8 @@ function imc() {
         document.getElementById("result").className = "alert alert-danger  mt-2 text-center";
         document.getElementById("magreza").style.backgroundColor = "red";
         document.getElementById("magreza").style.color = "white";
+        document.getElementById("magrezaSm").style.backgroundColor = "red";
+        document.getElementById("magrezaSm").style.color = "white";
     }
 
     if (result >= 18.5 && result <= 24.9) {
@@ -32,6 +34,8 @@ function imc() {
         document.getElementById("result").className = "alert alert-primary  mt-2 text-center";
         document.getElementById("normal").style.backgroundColor = "skyblue";
         document.getElementById("normal").style.color = "black";
+        document.getElementById("normalSm").style.backgroundColor = "skyblue";
+        document.getElementById("normalSm").style.color = "black";
     }
     if (result >= 25.0 && result <= 29.9) {
         clean();
@@ -39,18 +43,26 @@ function imc() {
         document.getElementById("result").className = "alert alert-warning mt-2 text-center";
         document.getElementById("sobrepeso").style.backgroundColor = "yellow";
         document.getElementById("sobrepeso").style.color = "black";
+        document.getElementById("sobrepesoSm").style.backgroundColor = "yellow";
+        document.getElementById("sobrepesoSm").style.color = "black";
     }
     if (result >= 30.0 && result <= 39.9) {
+        clean();
         newText.textContent = "Obesidade: " + parseFloat(result.toFixed(2));
         document.getElementById("result").className = "alert alert-danger mt-2 text-center";
         document.getElementById("obesidade").style.backgroundColor = "darkred";
         document.getElementById("obesidade").style.color = "white";
+        document.getElementById("obesidadeSm").style.backgroundColor = "darkred";
+        document.getElementById("obesidadeSm").style.color = "white";
     }
     if (result >= 40.0) {
+        clean();
         newText.textContent = "Obesidade grave: " + parseFloat(result.toFixed(2));
         document.getElementById("result").className = "alert alert-danger mt-2 text-center";
         document.getElementById("grave").style.backgroundColor = "darkred";
         document.getElementById("grave").style.color = "white";
+        document.getElementById("graveSm").style.backgroundColor = "darkred";
+        document.getElementById("graveSm").style.color = "white";
     }
 }
 function validate() {
@@ -79,6 +91,16 @@ function clean() {
     document.getElementById("obesidade").style.color = "black";
     document.getElementById("grave").style.backgroundColor = "white";
     document.getElementById("grave").style.color = "black";
+    document.getElementById("magrezaSm").style.backgroundColor = "white";
+    document.getElementById("magrezaSm").style.color = "black";
+    document.getElementById("normalSm").style.backgroundColor = "white";
+    document.getElementById("normalSm").style.color = "black";
+    document.getElementById("sobrepesoSm").style.backgroundColor = "white";
+    document.getElementById("sobrepesoSm").style.color = "black";
+    document.getElementById("obesidadeSm").style.backgroundColor = "white";
+    document.getElementById("obesidadeSm").style.color = "black";
+    document.getElementById("graveSm").style.backgroundColor = "white";
+    document.getElementById("graveSm").style.color = "black";
 
 
     validate();
