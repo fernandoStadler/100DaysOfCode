@@ -54,8 +54,7 @@ function imc() {
     }
 }
 function validate() {
-    clean();
-
+ 
     if (this.altura.value == '' | this.peso.value == '') {
         btn.disabled = true
     }
