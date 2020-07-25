@@ -10,3 +10,5 @@ Atualmente o repositório conta com 2 projetos.
 * Tabuada
 
 Ambos os projetos foram implementados com JavaScript, CSS, HTML5 e Jquery.
+
+*Demo:* https://fernandostadler.github.io/100DaysOfCode/ 
