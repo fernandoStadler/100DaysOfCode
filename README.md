@@ -4,10 +4,11 @@ Repositório criado para o desafio # 100DaysOfCode
 
 O intuito do desafio é codar 100 dias seguidos.
 
-Atualmente o repositório conta com 2 projetos.
+Atualmente o repositório conta com 3 projetos.
     
 * Calculadora de IMC
 * Tabuada
+* Fuel Calc (Em desenvolvimento)
 
 Ambos os projetos foram implementados com JavaScript, CSS, HTML5 e Jquery.
 
