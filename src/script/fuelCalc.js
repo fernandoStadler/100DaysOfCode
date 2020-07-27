@@ -45,7 +45,7 @@ fuel_total = dist / cons_med;
 
 let total = (parseFloat(fuel_total)) * price_fuel;
 
-result.textContent= parseFloat(total.toFixed(10));
+result.textContent= parseFloat(total.toFixed(2));
 
 }
 
