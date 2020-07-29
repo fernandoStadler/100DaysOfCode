@@ -2,12 +2,7 @@
 
 $("#kmDist").mask("0000000");
 $("#medVeic").mask("000000");
-$("#precFuel").mask('#.##0.00', {reverse: true});
-$("#result").mask('#.##0.00', {reverse: true});
-
-
-
-
+$("#precFuel").mask("#.##0,00", {reverse: true});
 
 
 function validate() 
@@ -31,21 +26,45 @@ function clean ()
     let dist = document.getElementById("kmDist").value="";
     let cons_med = document.getElementById("medVeic").value="";
     let price_fuel = document.getElementById("precFuel").value="";
+    validate();
+    cleanAlert();
+}
+
+function cleanAlert() 
+
+{
+    let resultText = document.getElementById("result");
+    resultText.className= "";
+    resultText.textContent= "";
+}
+function createAlert() 
+
+{
+    let resultText = document.getElementById("result");
+    resultText.className= "alert alert-yellow mt-4"; 
 }
 
 function fuelCalc(){
 
+createAlert();
 let dist = document.getElementById("kmDist").value;
 let cons_med = document.getElementById("medVeic").value;
-let price_fuel = document.getElementById("precFuel").value;
+let price_fuel = document.getElementById("precFuel").value.replace(",",".");
 let fuel_total;
 let result = document.getElementById("result");
 
 fuel_total = dist / cons_med;
-
 let total = (parseFloat(fuel_total)) * price_fuel;
 
-result.textContent= parseFloat(total.toFixed(2));
-
+let fort_text = total.toString();
+fort_text.substr(0,5);
+result.textContent= "R$ "+ fort_text.replace(".",",");;
 }
+
+
+
+
+
+
+
 

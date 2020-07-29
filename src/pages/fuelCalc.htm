@@ -3,7 +3,7 @@
   <head>
 
    
-    <title>Fuel Calc</title>
+    <title>Calculadora de Combustível</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,10 +18,10 @@
     <script src="https://kit.fontawesome.com/bc9efa09e1.js" crossorigin="anonymous"></script>
 
 </head>
-  <body onload="validate()">
+  <body onload="clean()">
     <nav class="navbar navbar-dark bg-dark">
        
-        <p class="font">FUEL CALC</p>
+        <p class="font">Calculadora de Combustível</p>
         <a href="../../index.html">
           <button type="button" class="btn btn-light float-right ">Voltar</button>
         </a>
@@ -34,7 +34,7 @@
               <div class="col-4"> 
                 
                   <input class="form-control mt-2" id="kmDist" type="text" required="required" oninput="validate()">
-                  <small>Km de distancia</small>
+                  <small>Km de distância</small>
 
             </div>
               <div class="col-4">  
@@ -44,25 +44,31 @@
             </div>
               <div class="col-4"> 
                   <input class="form-control mt-2 precFuel" id="precFuel" type="text"   oninput="validate()">
-                  <small>Preço do Combustivel</small> 
+                  <small>R$ do combustível</small> 
             
             </div>   
           </div>
           <div class="row">
-              <div class="col-12 col-sm-6 mt-4">
+              <div class="col-12  col-sm-6  mt-4">
 
                 <button id="btnCalc" class="btn btn-success btn-block" onclick="fuelCalc()"> Calcular</button>
                 
             </div>
-            <div class=" col-12 col-sm-6 mt-4">
+            <div class="col-12  col-sm-6  mt-4">
                 <button class="btn btn-danger btn-block" onclick="clean()">Limpar</button>   
             </div>
           </div>
 
           <div id="result"class="alert alert-yellow mt-4" role="alert">
-                ...
+             
           </div>
-      </div>
+        </div>
+        <div class="container bg-peace py-2 mt-4">
+
+          <h3 class="text-justify mt-5 text-center">Como calcular a média de Km do seu carro?</h3>
+          <p class="text-justify mt-5">Para calcular a média em quilômetros por litro, basta dividir os quilômetros percorridos pela quantidade de litros que a bomba marca no segundo abastecimento. Por exemplo, se você rodou 450 quilômetros e no abastecimento precisou colocar 32 litros para completar o tanque, a média será de 14,06 (450 dividido por 32).</p>
+          
+        </div>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
