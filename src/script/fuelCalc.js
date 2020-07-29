@@ -1,9 +1,7 @@
 //MASK
-
 $("#kmDist").mask("0000000");
 $("#medVeic").mask("000000");
 $("#precFuel").mask("#.##0,00", {reverse: true});
-
 
 function validate() 
 {
@@ -20,7 +18,6 @@ let price_fuel = document.getElementById("precFuel").value;
         btnCalc.disabled=false;
     }
 }
-
 function clean ()
 {
     let dist = document.getElementById("kmDist").value="";
@@ -41,7 +38,7 @@ function createAlert()
 
 {
     let resultText = document.getElementById("result");
-    resultText.className= "alert alert-yellow mt-4"; 
+    resultText.className= "alert alert-yellow dark-font mt-4 text-center"; 
 }
 
 function fuelCalc(){
@@ -53,15 +50,14 @@ let price_fuel = document.getElementById("precFuel").value.replace(",",".");
 let fuel_total;
 let result = document.getElementById("result");
 
+
 fuel_total = dist / cons_med;
 let total = (parseFloat(fuel_total)) * price_fuel;
 
-let fort_text = total.toLocaleString("pt-BR",{style: "currency", currency:"BRL"});
+let format_text = total.toLocaleString("pt-BR",{style: "currency", currency:"BRL"});
 
-console.log(total);
+result.textContent = format_text;
 
-
-result.textContent = fort_text;
 }
 
 

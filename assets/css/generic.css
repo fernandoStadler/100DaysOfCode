@@ -2,6 +2,7 @@
 html, body{  height: 100%;background-color: rgb(243, 239, 239)!important;}
 
 .font{color: white; font-family: monospace; }
+.dark-font{color:black; font-family: monospace; }
 
 .center-total{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
 
