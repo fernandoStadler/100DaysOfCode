@@ -56,11 +56,13 @@ let result = document.getElementById("result");
 fuel_total = dist / cons_med;
 let total = (parseFloat(fuel_total)) * price_fuel;
 
-let fort_text = total.toString();
-fort_text.substr(0,5);
-result.textContent= "R$ "+ fort_text.replace(".",",");;
-}
+let fort_text = total.toLocaleString("pt-BR",{style: "currency", currency:"BRL"});
 
+console.log(total);
+
+
+result.textContent = fort_text;
+}
 
 
 
