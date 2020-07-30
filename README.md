@@ -8,7 +8,7 @@ Atualmente o repositório conta com 3 projetos.
     
 * Calculadora de IMC
 * Tabuada
-* Fuel Calc (Em desenvolvimento)
+* Fuel Calc 
 
 Ambos os projetos foram implementados com JavaScript, CSS, HTML5 e Jquery.
 
